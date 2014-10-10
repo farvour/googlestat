@@ -25,5 +25,6 @@ def main(argv=sys.argv):
     setup_logging(config_uri)
     settings = get_appsettings(config_uri, options=options)
     engine = engine_from_config(settings, 'sqlalchemy.')
+
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
