@@ -46,4 +46,5 @@ setup(name='googlestat',
       main = googlestat:main
       [console_scripts]
       initialize_googlestat_db = googlestat.scripts.initializedb:main
+      run_googlestat_ping = googlestat.scripts.ping:main
       """,)

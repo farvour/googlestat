@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ record.site_url }}</td>
                 <td>{{ record.response_code }}</td>
-                <td>{{ record.response_time }}</td>
+                <td>{{ record.response_time / 1000 }} milliseconds</td>
                 <td>{{ record.date_added }}</td>
             </tr>
         {% endfor %}
