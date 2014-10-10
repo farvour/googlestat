@@ -1,0 +1,5 @@
+# Hide IntelliJ Files.
+.idea/*
+
+# Hide vim temp files.
+*.swp
