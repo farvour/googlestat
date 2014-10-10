@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Google Ping Statistics</title>
+</head>
+
+<body>
+<div id="main">
+    <h1>Last 10 Results of Ping Test</h1>
+
+    <table cellpadding="10" cellspacing="0" border="1">
+        <thead>
+        <th>Site URL</th>
+        <th>Status Code</th>
+        <th>Response Time</th>
+        <th>Date</th>
+        </thead>
+        <tbody>
+        {% for record in records %}
+            <tr>
+                <td>{{ record.site_url }}</td>
+                <td>{{ record.response_code }}</td>
+                <td>{{ record.response_time }}</td>
+                <td>{{ record.date_added }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
