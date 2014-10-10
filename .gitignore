@@ -3,3 +3,8 @@
 
 # Hide vim temp files.
 *.swp
+
+# Hide built / dist / egg files.
+dist/*
+build/*
+googlestat.egg-info/*
