@@ -44,12 +44,14 @@ class PingService(object):
             # Set code, time and success.
             response_code = req.status_code
             response_time = int(time_delta.microseconds)
+            response_size = len(req.text)
             response_success = True
 
         except Timeout:
             # Set defaults of -1 and report that the response failed.
             response_code = -1
             response_time = -1
+            response_size = 0
             response_success = False
 
         # Create data record.
@@ -57,6 +59,7 @@ class PingService(object):
         ping_record.site_url = self.uri
         ping_record.response_code = response_code
         ping_record.response_time = response_time
+        ping_record.response_size = response_size
         ping_record.success = response_success
         ping_record.date_added = datetime.datetime.now()
 

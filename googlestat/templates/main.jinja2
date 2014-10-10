@@ -13,6 +13,7 @@
         <th>Site URL</th>
         <th>Status Code</th>
         <th>Response Time</th>
+        <th>Response Size</th>
         <th>Date</th>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
                 <td>{{ record.site_url }}</td>
                 <td>{{ record.response_code }}</td>
                 <td>{{ record.response_time / 1000 }} milliseconds</td>
+                <td>{{ record.response_size / 1024 }} KiB</td>
                 <td>{{ record.date_added }}</td>
             </tr>
         {% endfor %}

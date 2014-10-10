@@ -18,5 +18,6 @@ class PingModel(Base):
     site_url = Column(String(200), nullable=False, default='')
     response_code = Column(Integer, nullable=False, index=True)
     response_time = Column(Integer, nullable=False)
+    response_size = Column(Integer, nullable=False)
     success = Column(Boolean, nullable=False)
     date_added = Column(DateTime(timezone=True), nullable=False)
